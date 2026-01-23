@@ -181,6 +181,7 @@ async function uploadVideoFile(videoID) {
 
     console.log("Video uploaded!");
     await getVideo(videoID);
+    console.log("video", video);
   } catch (error) {
     alert(`Error: ${error.message}`);
   }
@@ -266,7 +267,7 @@ function viewVideo(video) {
     thumbnailImg.style.display = "none";
   } else {
     thumbnailImg.style.display = "block";
-    thumbnailImg.src = video.thumbnailURL
+    thumbnailImg.src = video.thumbnailURL;
   }
 
   const videoPlayer = document.getElementById("video-player");

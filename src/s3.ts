@@ -4,7 +4,7 @@ export async function uploadVideoToS3(
   cfg: ApiConfig,
   key: string,
   processesFilePath: string,
-  contentType: string
+  contentType: string,
 ) {
   const s3file = cfg.s3Client.file(key, { bucket: cfg.s3Bucket });
   const videoFile = Bun.file(processesFilePath);

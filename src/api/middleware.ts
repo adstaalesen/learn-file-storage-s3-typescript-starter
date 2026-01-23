@@ -67,3 +67,4 @@ function errStringFromError(err: unknown) {
   if (err instanceof Error) return err.message;
   return "An unknown error occurred";
 }
+

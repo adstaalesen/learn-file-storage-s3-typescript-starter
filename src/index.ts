@@ -62,7 +62,7 @@ Bun.serve({
 
     if (path.startsWith("/assets")) {
       return noCacheMiddleware(() =>
-        serveStaticFile(path.replace("/assets/", ""), cfg.assetsRoot)
+        serveStaticFile(path.replace("/assets/", ""), cfg.assetsRoot),
       )(req);
     }
 
